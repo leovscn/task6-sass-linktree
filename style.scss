@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+$preto: #131f1a;
+$azul: #31b5d6;
+$vermelho: #da4e4e;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  justify-content: center;
+  background: linear-gradient($vermelho, $azul);
+  display: flex;
+  padding: 2rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    background: $azul;
+
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 65%;
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    .img-top {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+      }
+
+      margin-bottom: -10rem;
+    }
+
+    .img-perfil {
+      justify-content: center;
+      display: flex;
+      padding-top: 5rem;
+
+      img {
+        width: 10rem;
+        border: 4px solid $azul;
+        transition: border-color 0.3s;
+      }
+      img:hover {
+        border-color: $vermelho;
+      }
+    }
+    h2 {
+      padding-top: 2rem;
+    }
+    p.main-text {
+      padding: 2rem 6rem;
+      width: 60%;
+      align-items: center;
+      justify-self: center;
+    }
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        li.icon {
+          img {
+            width: 2.5rem;
+
+            background-color: $azul;
+            transition: background-color 0.3s;
+          }
+          img:hover {
+            background-color: $vermelho;
+          }
+        }
+      }
+
+      div.links ul {
+        display: grid;
+        gap: 1.5rem;
+        padding-top: 1rem;
+        justify-content: center;
+        width: 100%;
+
+        .link {
+          display: flex;
+          background-color: #000000;
+          color: white;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.2rem;
+          padding-right: 0.2rem;
+          width: auto;
+          @media screen and (max-width: 600px) {
+            scale: 0.85;
+          }
+          .link-text {
+            padding-right: 1rem;
+            max-width: 80%;
+            font-weight: bold;
+            @media screen and (max-width: 600px) {
+              font-size: 80%;
+            }
+          }
+        }
+
+        .icon-link {
+          display: flex;
+          height: 1rem;
+
+          justify-content: center;
+          align-items: center;
+
+          i {
+            display: flex;
+            background-color: $azul;
+            padding: 1rem;
+            color: $preto;
+            transition: background-color 0.3s, color 0.3s;
+          }
+          i:hover {
+            background-color: $vermelho;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
